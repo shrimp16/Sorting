@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/shrimp16/Sorting/issues"
   },
-  "homepage": "https://github.com/shrimp16/Sorting#readme"
+  "homepage": "https://github.com/shrimp16/Sorting#readme",
+  "dependencies": {
+    "yargs": "^17.5.1"
+  }
 }
