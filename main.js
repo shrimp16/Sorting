@@ -1,3 +1,8 @@
+const yargs = require('yargs');
+
+console.log(yargs.argv._);
+const sortBy = yargs.argv._[0];
+
 const names = [
     "Luis",
     "Beatriz",
@@ -44,23 +49,13 @@ const data = [
     },
 ]
 
-console.log(names.sort());
+//console.log(names.sort());
 
 console.log(data.sort((a, b) => {
-    if (a.age > b.age) {
+    if (a[sortBy] > b[sortBy]) {
         return 1;
     }
-    if (a.age < b.age) {
-        return -1;
-    }
-    return 0;
-}))
-
-console.log(data.sort((a, b) => {
-    if (a.name > b.name) {
-        return 1;
-    }
-    if (a.name < b.name) {
+    if (a[sortBy] < b[sortBy]) {
         return -1;
     }
     return 0;
