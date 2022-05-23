@@ -1,7 +1,9 @@
 const yargs = require('yargs');
+const fs = require('fs');
 
-console.log(yargs.argv._);
-const sortBy = yargs.argv._[0];
+const initialFile = yargs.argv._[0];
+const sortedFile = yargs.argv._[1];
+const sortBy = yargs.argv._[2];
 
 const names = [
     "Luis",

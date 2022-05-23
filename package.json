@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/shrimp16/Sorting#readme",
   "dependencies": {
+    "fs": "^0.0.1-security",
     "yargs": "^17.5.1"
   }
 }
