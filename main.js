@@ -9,7 +9,19 @@ const data = JSON.parse(fs.readFileSync(`${initialFile}.json`));
 
 console.log(data);
 
-fs.writeFile(`${sortedFile}.json`, JSON.stringify(data, null, 2), (err) => {
+const newData = data.sort((a, b) => {
+    if(a[sortBy] > b[sortBy]){
+        return 1;
+    }
+
+    if(a[sortBy] < b[sortBy]){
+        return -1;
+    }
+
+    return 0;
+})
+
+fs.writeFile(`${sortedFile}.json`, JSON.stringify(newData, null, 2), (err) => {
     if(err) throw err;
 })
 
